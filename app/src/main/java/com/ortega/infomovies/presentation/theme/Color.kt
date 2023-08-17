@@ -1,4 +1,4 @@
-package com.ortega.infomovies.ui.theme
+package com.ortega.infomovies.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

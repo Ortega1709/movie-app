@@ -1,4 +1,4 @@
-package com.ortega.infomovies.ui.theme
+package com.ortega.infomovies.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

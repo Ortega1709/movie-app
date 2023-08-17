@@ -1,4 +1,4 @@
-package com.ortega.infomovies.ui.theme
+package com.ortega.infomovies.presentation.theme
 
 import android.app.Activity
 import android.os.Build
