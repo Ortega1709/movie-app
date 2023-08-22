@@ -1,11 +1,12 @@
 package com.ortega.infomovies.data.datasource.local.dao
 
 import androidx.paging.PagingSource
-import androidx.room.Delete
+import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
 import com.ortega.infomovies.domain.model.PopularMovie
 
+@Dao
 interface PopularMovieDao {
 
     @Upsert
