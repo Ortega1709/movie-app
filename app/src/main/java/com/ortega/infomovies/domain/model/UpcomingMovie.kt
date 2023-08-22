@@ -1,8 +1,13 @@
 package com.ortega.infomovies.domain.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import com.ortega.infomovies.util.Constants.UPCOMING_MOVIE_TABLE
 
-data class Movie(
+@Entity(tableName = UPCOMING_MOVIE_TABLE)
+data class UpcomingMovie(
+    @PrimaryKey(autoGenerate = false)
     val id: Int,
     @SerializedName("poster_path")
     val posterPath: String,

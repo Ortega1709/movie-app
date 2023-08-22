@@ -2,7 +2,7 @@ package com.ortega.infomovies.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-data class DetailsMovie(
+data class DetailMovie(
     @SerializedName("backdrop_path")
     val backdropPath: String,
     val genres: List<Genres>,

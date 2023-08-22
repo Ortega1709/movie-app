@@ -1,13 +1,9 @@
 package com.ortega.infomovies.data.repository
 
-import android.content.Context
-import com.ortega.infomovies.data.datasource.remote.MovieAPI
-import com.ortega.infomovies.util.Result
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.flow
+import com.ortega.infomovies.data.datasource.remote.MovieApi
 import javax.inject.Inject
 
-class MovieRepository @Inject constructor(private val movieAPI: MovieAPI) {
+class MovieRepository @Inject constructor(private val movieAPI: MovieApi) {
 
     suspend fun getPopularMovies(page: Int, language: String) =
         movieAPI.getPopularMovies(page = page, language = language)
