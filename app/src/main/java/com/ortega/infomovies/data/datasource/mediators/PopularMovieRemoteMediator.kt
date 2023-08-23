@@ -17,7 +17,7 @@ import javax.inject.Inject
 class PopularMovieRemoteMediator @Inject constructor(
     private val movieApi: MovieApi,
     private val movieDatabase: MovieDatabase
-) : RemoteMediator<Int, PopularMovie>() {
+): RemoteMediator<Int, PopularMovie>() {
 
     private val popularMovieDao = movieDatabase.popularMovieDao()
     private val popularMovieRemoteKeysDao = movieDatabase.popularRemoteKeysDao()
