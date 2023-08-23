@@ -9,6 +9,7 @@ import com.ortega.infomovies.data.datasource.local.dao.RatedMovieRemoteKeysDao
 import com.ortega.infomovies.data.datasource.local.dao.RecommendedMovieDao
 import com.ortega.infomovies.data.datasource.local.dao.RecommendedMovieRemoteKeysDao
 import com.ortega.infomovies.data.datasource.local.dao.UpcomingMovieDao
+import com.ortega.infomovies.data.datasource.local.dao.UpcomingMovieRemoteKeysDao
 import com.ortega.infomovies.domain.model.PopularMovie
 import com.ortega.infomovies.domain.model.RatedMovie
 import com.ortega.infomovies.domain.model.RecommendedMovie
@@ -39,7 +40,7 @@ abstract class MovieDatabase : RoomDatabase() {
 
     abstract fun popularRemoteKeysDao(): PopularMovieRemoteKeysDao
     abstract fun ratedRemoteKeysDao(): RatedMovieRemoteKeysDao
-    abstract fun upcomingRemoteKeysDao(): UpcomingMovieRemoteKeys
+    abstract fun upcomingRemoteKeysDao(): UpcomingMovieRemoteKeysDao
     abstract fun recommendedRemoteKeysDao(): RecommendedMovieRemoteKeysDao
 
 
