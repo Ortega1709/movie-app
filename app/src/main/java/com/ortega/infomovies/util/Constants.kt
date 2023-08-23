@@ -7,11 +7,11 @@ object Constants {
     const val RATED_MOVIE_TABLE = "rated_movie_table"
 
     const val RECOMMENDED_MOVIE_TABLE = "recommended_movie_table"
-    const val POPULAR_REMOTE_KEYS_TABLE = "popular_remote_keys_table"
-    const val UPCOMING_REMOTE_KEYS_TABLE = "upcoming_remote_keys_table"
+    const val POPULAR_MOVIE_REMOTE_KEYS_TABLE = "popular_movie_remote_keys_table"
+    const val UPCOMING_MOVIE_REMOTE_KEYS_TABLE = "upcoming_movie_remote_keys_table"
 
-    const val RATED_REMOTE_KEYS_TABLE = "rated_remote_keys_table"
-    const val RECOMMENDED_REMOTE_KEYS_TABLE = "recommended_remote_keys_table"
+    const val RATED_MOVIE_REMOTE_KEYS_TABLE = "rated_movie_remote_keys_table"
+    const val RECOMMENDED_MOVIE_REMOTE_KEYS_TABLE = "recommended_movie_remote_keys_table"
     const val MOVIE_DATABASE = "movie_database"
 
     const val BASE_URL = "https://api.themoviedb.org/"

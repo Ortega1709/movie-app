@@ -2,10 +2,10 @@ package com.ortega.infomovies.domain.remoteKeys
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.ortega.infomovies.util.Constants.POPULAR_REMOTE_KEYS_TABLE
+import com.ortega.infomovies.util.Constants.POPULAR_MOVIE_REMOTE_KEYS_TABLE
 
-@Entity(tableName = POPULAR_REMOTE_KEYS_TABLE)
-data class PopularRemoteKeys(
+@Entity(tableName = POPULAR_MOVIE_REMOTE_KEYS_TABLE)
+data class PopularMovieRemoteKeys(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
     val previousPage: Int?,
