@@ -5,18 +5,13 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.ortega.infomovies.data.datasource.local.MovieDatabase
-import com.ortega.infomovies.data.datasource.mediators.PopularMovieRemoteMediator
-import com.ortega.infomovies.data.datasource.mediators.RatedMovieRemoteMediator
-import com.ortega.infomovies.data.datasource.mediators.UpcomingMovieRemoteMediator
 import com.ortega.infomovies.data.datasource.remote.MovieApi
-import com.ortega.infomovies.domain.model.PopularMovie
-import com.ortega.infomovies.domain.model.RatedMovie
 import com.ortega.infomovies.domain.model.UpcomingMovie
 import com.ortega.infomovies.util.Constants.PER_PAGE
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-@OptIn(ExperimentalPagingApi::class)
+@ExperimentalPagingApi
 class MovieRepository @Inject constructor(
     private val movieAPI: MovieApi,
     private val movieDatabase: MovieDatabase

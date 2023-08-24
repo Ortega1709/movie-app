@@ -32,4 +32,5 @@ object Constants {
 
     const val READ_KEY =
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNjUxY2ZlNDA2Yzc5MGJkZGJjZDc0YjdmOTEwZDc4ZiIsInN1YiI6IjY0ZGRjYzRmYWFlYzcxMDNmY2ZjZTcxZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YmTrVuuF1JS8Clo6Nn7nCoRv61u1BCtK34Qqc6C3Nk8"
+
 }

@@ -5,9 +5,10 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.ortega.infomovies.util.Constants.UPCOMING_MOVIE_TABLE
 
+
 @Entity(tableName = UPCOMING_MOVIE_TABLE)
 data class UpcomingMovie(
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey
     val id: Int,
     @SerializedName("poster_path")
     val posterPath: String,

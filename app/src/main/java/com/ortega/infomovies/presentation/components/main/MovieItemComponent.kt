@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.ortega.infomovies.domain.model.PopularMovie
+import com.ortega.infomovies.domain.model.UpcomingMovie
 import com.ortega.infomovies.presentation.components.common.VoteComponent
 import com.ortega.infomovies.presentation.theme.InfoMoviesTheme
 import com.ortega.infomovies.util.Constants.IMAGES_w600_h900
@@ -41,6 +41,83 @@ fun MovieItemComponent(movie: PopularMovie) {
             contentScale = ContentScale.Crop,
             contentDescription = null
             )
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = {
+                Text(
+                    text = movie.title,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1,
+                    fontSize = 15.sp,
+                    color = Color.White
+                )
+            },
+            supportingContent = {
+                VoteComponent(
+                    vote = movie.voteAverage,
+                    voteCount = movie.voteCount
+                )
+            }
+        )
+    }
+
+}
+
+
+@Composable
+fun MovieItemComponent(movie: UpcomingMovie) {
+
+    Column(
+        modifier = Modifier.widthIn(max = 160.dp)
+    ) {
+        AsyncImage(
+            model = IMAGES_w600_h900 + movie.posterPath,
+            modifier = Modifier
+                .height(210.dp)
+                .width(160.dp)
+                .clip(RoundedCornerShape(16.dp))
+                .background(Color.LightGray),
+            contentScale = ContentScale.Crop,
+            contentDescription = null
+        )
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = {
+                Text(
+                    text = movie.title,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1,
+                    fontSize = 15.sp,
+                    color = Color.White
+                )
+            },
+            supportingContent = {
+                VoteComponent(
+                    vote = movie.voteAverage,
+                    voteCount = movie.voteCount
+                )
+            }
+        )
+    }
+
+}
+
+@Composable
+fun MovieItemComponent(movie: RatedMovie) {
+
+    Column(
+        modifier = Modifier.widthIn(max = 160.dp)
+    ) {
+        AsyncImage(
+            model = IMAGES_w600_h900 + movie.posterPath,
+            modifier = Modifier
+                .height(210.dp)
+                .width(160.dp)
+                .clip(RoundedCornerShape(16.dp))
+                .background(Color.LightGray),
+            contentScale = ContentScale.Crop,
+            contentDescription = null
+        )
         ListItem(
             colors = ListItemDefaults.colors(containerColor = Color.Transparent),
             headlineContent = {

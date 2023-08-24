@@ -25,15 +25,7 @@ object NetworkModule {
         return OkHttpClient.Builder()
             .readTimeout(15, TimeUnit.SECONDS)
             .connectTimeout(15, TimeUnit.SECONDS)
-            .addInterceptor {
-                val request = it.request().newBuilder()
-                    .addHeader("content-type", "application/json;charset=utf-8")
-                    .addHeader("x-api-key", API_KEY)
-                    .addHeader("Authorization", READ_KEY)
-                    .build()
-
-                it.proceed(request)
-            }.build()
+            .build()
 
     }
 

@@ -10,11 +10,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.paging.ExperimentalPagingApi
+import androidx.paging.compose.collectAsLazyPagingItems
+import coil.annotation.ExperimentalCoilApi
 import com.ortega.infomovies.R
 import com.ortega.infomovies.presentation.components.common.TitleComponent
+import com.ortega.infomovies.presentation.components.main.PopularMovieList
+import com.ortega.infomovies.presentation.components.main.RatedMovieList
+import com.ortega.infomovies.presentation.components.main.UpcomingMovieList
 
+@ExperimentalCoilApi
+@ExperimentalPagingApi
 @Composable
 fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
+
+    val upcomingMovies = viewModel.upcomingMovies.collectAsLazyPagingItems()
 
 
     /*LaunchedEffect(key1 = ratedMovies.loadState) {
@@ -26,9 +36,6 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
             ).show()
         }
     }*/
-
-
-
 
     Scaffold(
         containerColor = Color.Black
@@ -45,7 +52,7 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
 
             }
 
-            //UpcomingMovieList(upcomingMovies = upcomingMovies)
+            UpcomingMovieList(upcomingMovies = upcomingMovies)
             
             TitleComponent(title = R.string.popular) {
                 

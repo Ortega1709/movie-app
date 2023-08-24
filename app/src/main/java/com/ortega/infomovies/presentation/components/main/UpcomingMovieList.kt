@@ -14,15 +14,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.ortega.infomovies.domain.model.PopularMovie
+import com.ortega.infomovies.domain.model.UpcomingMovie
 
 @Composable
-fun UpcomingMovieList(upcomingMovies: LazyPagingItems<PopularMovie>) {
+fun UpcomingMovieList(upcomingMovies: LazyPagingItems<UpcomingMovie>) {
 
     if (upcomingMovies.loadState.refresh is LoadState.Loading) {
-        Column {
+        /*Column {
             CircularProgressIndicator()
-        }
+        }*/
     } else {
 
         LazyRow {
