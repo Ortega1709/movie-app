@@ -83,6 +83,7 @@ dependencies {
     // Retrofit
     implementation(libs.retrofit.converter.gson)
     implementation(libs.retrofit)
+    implementation(libs.kotlin.serialization)
 
     // Room
     implementation(libs.room.android)
